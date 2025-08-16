@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - Store</title>
+    <!-- Link to the new stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo"> Saud store</a>
+
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./products.html">Products</a>
+                <a href="./support.html">Support</a>
+
+            </div>
+
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="ri-search-line"></i></button>
+                <button class="icon-btn"><i class="ri-shopping-bag-line"></i></button>
+                <button class="icon-btn mobile-menu-btn"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: url('./img/iphone15 pro max.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>iPhone 15 Pro</h1>
+                    <p>Titanium. So strong. So light. So Pro.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Learn More</button>
+                        <button class="btn btn-outline">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('./img/MacBook Pro.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>MacBook Pro</h1>
+                    <p>Mind-blowing. Head-turning.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Learn More</button>
+                        <button class="btn btn-outline">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('./img/Apple Watch.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Apple Watch</h1>
+                    <p>Your essential companion.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Learn More</button>
+                        <button class="btn btn-outline">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-dot" data-slide="0"></button>
+            <button class="slider-dot" data-slide="1"></button>
+            <button class="slider-dot" data-slide="2"></button>
+        </div>
+
+        <button class="slider-arrow prev" id="prevSlide"><i class="ri-arrow-left-line"></i></button>
+        <button class="slider-arrow next" id="nextSlide"><i class="ri-arrow-right-line"></i></button>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="section bg-light-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Products</h2>
+                <p>Innovation in every detail</p>
+            </div>
+
+            <div class="filter-wrapper">
+                <div class="filter-container">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="phones">iPhone</button>
+                    <button class="filter-btn" data-category="computers">Mac</button>
+                    <button class="filter-btn" data-category="tablets">iPad</button>
+                    <button class="filter-btn" data-category="watches">Watch</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <div class="product-card" data-category="phones">
+                    <div class="card-image-wrapper"><img src="./img/iphone 15.jpg" alt="iPhone 15 Pro Max"></div>
+                    <div class="card-content">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p>The ultimate iPhone experience</p>
+                        <span class="price">From $1,199</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="card-image-wrapper"><img src="img/iPhone 15 nomal.jpg" alt="iPhone 15"></div>
+                    <div class="card-content">
+                        <h3>iPhone 15</h3>
+                        <p>New camera. New design. Newphoria.</p>
+                        <span class="price">From $799</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="computers">
+                    <div class="card-image-wrapper"><img src="img/MacBook Air.jpg" alt="MacBook Air"></div>
+                    <div class="card-content">
+                        <h3>MacBook Air</h3>
+                        <p>Supercharged by M2</p>
+                        <span class="price">From $1,099</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="computers">
+                    <div class="card-image-wrapper"><img src="./img/iMac.jpg" alt="iMac"></div>
+                    <div class="card-content">
+                        <h3>iMac</h3>
+                        <p>Packed with M3 chip</p>
+                        <span class="price">From $1,299</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="tablets">
+                    <div class="card-image-wrapper"><img src="img/iPad Pro.jpg" alt="iPad Pro"></div>
+                    <div class="card-content">
+                        <h3>iPad Pro</h3>
+                        <p>Supercharged by M2</p>
+                        <span class="price">From $799</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="watches">
+                    <div class="card-image-wrapper"><img src="./img/Apple Watch Series.jpg" alt="Apple Watch Series 9"></div>
+                    <div class="card-content">
+                        <h3>Apple Watch Series 9</h3>
+                        <p>Your essential companion</p>
+                        <span class="price">From $399</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apple TV+ Section -->
+    <section class="section bg-black">
+        <div class="container">
+            <div class="section-header text-white">
+                <h2>Apple TV+</h2>
+                <p>Original stories from the most creative minds</p>
+            </div>
+
+            <div class="scroll-container">
+                <div class="tv-show-scroller">
+                    <div class="tv-card group">
+                        <img src="./img/Foundation.jpg" alt="Foundation">
+                        <div class="tv-card-overlay">
+                            <button class="btn btn-watch">Watch Now</button>
+                            <h3>Foundation</h3>
+                        </div>
+                    </div>
+
+                    <div class="tv-card group">
+                        <img src="./img/Severance.jpg" alt="Severance">
+                        <div class="tv-card-overlay">
+                            <button class="btn btn-watch">Watch Now</button>
+                            <h3>Severance</h3>
+                        </div>
+                    </div>
+
+                    <div class="tv-card group">
+                        <img src="./img/Ted Lasso.jpg" alt="Ted Lasso">
+                        <div class="tv-card-overlay">
+                            <button class="btn btn-watch">Watch Now</button>
+                            <h3>Ted Lasso</h3>
+                        </div>
+                    </div>
+
+                    <div class="tv-card group">
+                        <img src="./img/The Morning Show.jpg" alt="The Morning Show">
+                        <div class="tv-card-overlay">
+                            <button class="btn btn-watch">Watch Now</button>
+                            <h3>The Morning Show</h3>
+                        </div>
+                    </div>
+
+                    <div class="tv-card group">
+                        <img src="./img/Our Planet.jpg" alt="Our Planet">
+                        <div class="tv-card-overlay">
+                            <button class="btn btn-watch">Watch Now</button>
+                            <h3>Our Planet</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Accessories -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Accessories</h2>
+                <p>Perfect complements to your Apple devices</p>
+            </div>
+
+            <div class="accessory-grid">
+                <div class="product-card bg-light-gray">
+                    <div class="card-image-wrapper"><img src="./img/AirPods Pro.jpg" alt="AirPods Pro"></div>
+                    <div class="card-content">
+                        <h3>AirPods Pro</h3>
+                        <p>Adaptive Audio. Now playing.</p>
+                        <span class="price">$249</span>
+                        <button class="btn btn-primary full-width">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-light-gray">
+                    <div class="card-image-wrapper"><img src="./img/MagSafe Charger.jpg" alt="MagSafe Charger"></div>
+                    <div class="card-content">
+                        <h3>MagSafe Charger</h3>
+                        <p>Snap on. Charge up.</p>
+                        <span class="price">$39</span>
+                        <button class="btn btn-primary full-width">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-light-gray">
+                    <div class="card-image-wrapper"><img src="./img/Apple P.jpg" alt="Apple Pencil"></div>
+                    <div class="card-content">
+                        <h3>Apple Pencil</h3>
+                        <p>Dream it up. Jot it down.</p>
+                        <span class="price">$129</span>
+                        <button class="btn btn-primary full-width">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section class="section bg-light-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Innovation & Sustainability</h2>
+                <p>Building a better future for everyone</p>
+            </div>
+
+            <div class="innovation-grid">
+                <div class="innovation-content">
+                    <h3>Carbon Neutral by 2030</h3>
+                    <p>We're committed to making our entire manufacturing supply chain and product life cycle carbon neutral by 2030. This includes transitioning to clean energy and using recycled materials in our products.</p>
+                    <ul class="sustainability-list">
+                        <li>
+                            <div class="sustainability-icon"><i class="ri-leaf-line"></i></div>
+                            <span>100% recycled rare earth elements in magnets</span>
+                        </li>
+                        <li>
+                            <div class="sustainability-icon"><i class="ri-recycle-line"></i></div>
+                            <span>75% recycled aluminum in iPhone 15</span>
+                        </li>
+                        <li>
+                            <div class="sustainability-icon"><i class="ri-plant-line"></i></div>
+                            <span>Fiber-based packaging from responsibly managed forests</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="innovation-image">
+                    <img src="./img/naula.jpg" alt="Sustainability">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo"> Saud store</div>
+                    <p>Think different. Innovation that matters.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">Mac</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">Apple Watch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repairs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Apple</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Saud Store Inc. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <i class="ri-visa-fill"></i>
+                    <i class="ri-paypal-fill"></i>
+                    <i class="ri-mastercard-fill"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="hero-slider">
+        // This script remains unchanged as it has no dependency on CSS class names
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function prevSlide() {
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+            }
+
+            function startAutoPlay() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(slideInterval);
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    stopAutoPlay();
+                    startAutoPlay();
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            });
+
+            showSlide(0);
+            startAutoPlay();
+        });
+    </script>
+    <script id="product-filter">
+        // This script also remains unchanged
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    productCards.forEach(card => {
+                        card.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

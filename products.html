@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Store - All Products</title>
+    <!-- We link to the same stylesheet to reuse components -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body>
+    <!-- Reused Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo"> Saud store</a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="./support.html">Support</a>
+            </div>
+            
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="ri-search-line"></i></button>
+                <button class="icon-btn"><i class="ri-shopping-bag-line"></i></button>
+                <button class="icon-btn mobile-menu-btn"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content for Products Page -->
+    <main class="products-page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Our Products</h1>
+                <p>Discover the perfect device for you.</p>
+            </header>
+
+            <!-- Filter Controls - Updated with new "Accessories" category -->
+            <div class="filter-controls">
+                <div class="search-bar">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" placeholder="Search by name or feature...">
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="phones">Phones</button>
+                    <button class="filter-btn" data-category="computers">Mac</button>
+                    <button class="filter-btn" data-category="tablets">Tablets</button>
+                    <button class="filter-btn" data-category="watches">Watches</button>
+                    <button class="filter-btn" data-category="audio">Audio</button>
+                    <button class="filter-btn" data-category="accessories">Accessories</button>
+                </div>
+            </div>
+
+            <!-- Reused Product Grid - Now with five more products -->
+            <div class="product-grid" id="productGrid">
+                
+                <!-- Phone Products -->
+                <div class="product-card" data-category="phones">
+                    <div class="card-image-wrapper"><img src="./img/iphone 15.jpg" alt="iPhone 15 Pro Max"></div>
+                    <div class="card-content">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p>The ultimate iPhone experience</p>
+                        <span class="price">From $1,199</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="card-image-wrapper"><img src="img/galaxy-s24ultra-titaniumgray-device-spen-front.png" alt="Samsung Galaxy S24 Ultra"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy S24 Ultra</h3>
+                        <p>Galaxy AI is here. A new era of mobile.</p>
+                        <span class="price">From $1,299</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="phones">
+                    <div class="card-image-wrapper"><img src="./img/PIX8PRO_1.jpg" alt="Google Pixel 8 Pro"></div>
+                    <div class="card-content">
+                        <h3>Google Pixel 8 Pro</h3>
+                        <p>The magic of Google AI, in your hand.</p>
+                        <span class="price">From $999</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Products -->
+                <div class="product-card" data-category="computers">
+                    <div class="card-image-wrapper"><img src="img/MacBook Air.jpg" alt="MacBook Air"></div>
+                    <div class="card-content">
+                        <h3>MacBook Air</h3>
+                        <p>Supercharged by M2</p>
+                        <span class="price">From $1,099</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="computers">
+                    <div class="card-image-wrapper"><img src="./img/iMac.jpg" alt="iMac"></div>
+                    <div class="card-content">
+                        <h3>iMac</h3>
+                        <p>Packed with M3 chip</p>
+                        <span class="price">From $1,299</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tablet Products -->
+                <div class="product-card" data-category="tablets">
+                    <div class="card-image-wrapper"><img src="img/iPad Pro.jpg" alt="iPad Pro"></div>
+                    <div class="card-content">
+                        <h3>iPad Pro</h3>
+                        <p>Supercharged by M2</p>
+                        <span class="price">From $799</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="tablets">
+                    <div class="card-image-wrapper"><img src="./img/my-feature--nbsp--538471218.webp" alt="Samsung Galaxy Tab S9"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy Tab S9</h3>
+                        <p>Your portable powerhouse for work and play.</p>
+                        <span class="price">From $799</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Watch Products -->
+                <div class="product-card" data-category="watches">
+                    <div class="card-image-wrapper"><img src="./img/Apple Watch Series.jpg" alt="Apple Watch Series 9"></div>
+                    <div class="card-content">
+                        <h3>Apple Watch Series 9</h3>
+                        <p>Your essential companion for a healthy life.</p>
+                        <span class="price">From $399</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="watches">
+                    <div class="card-image-wrapper"><img src="./img/61GT3v2ztOL._UF894,1000_QL80_.jpg" alt="Samsung Galaxy Watch 6"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy Watch 6</h3>
+                        <p>Start your everyday wellness journey.</p>
+                        <span class="price">From $299</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Products -->
+                <div class="product-card" data-category="audio">
+                    <div class="card-image-wrapper"><img src="./img/AirPods Pro.jpg" alt="AirPods Pro"></div>
+                    <div class="card-content">
+                        <h3>AirPods Pro (2nd Gen)</h3>
+                        <p>Adaptive Audio. Now playing.</p>
+                        <span class="price">From $249</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="audio">
+                    <div class="card-image-wrapper"><img src="./img/6145c1d32e6ac8e63a46c912dc33c5bb.avif" alt="Sony WH-1000XM5"></div>
+                    <div class="card-content">
+                        <h3>Sony WH-1000XM5</h3>
+                        <p>Industry-leading noise canceling headphones.</p>
+                        <span class="price">From $399</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accessories (NEW) -->
+                <div class="product-card" data-category="accessories">
+                    <div class="card-image-wrapper"><img src="./img/MXCL3.jpeg" alt="Apple Magic Keyboard"></div>
+                    <div class="card-content">
+                        <h3>Magic Keyboard</h3>
+                        <p>An amazing typing and trackpad experience.</p>
+                        <span class="price">From $299</span>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This message will appear if no products match the filter -->
+                <div id="noResultsMessage" class="no-results">
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reused Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo"> Saud store</div>
+                    <p>Think different. Innovation that matters.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Mac</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Apple</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Apple Inc. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <i class="ri-visa-fill"></i>
+                    <i class="ri-paypal-fill"></i>
+                    <i class="ri-mastercard-fill"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Search and Filtering (No changes needed) -->
+    <script id="product-filter-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-grid .product-card');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+
+            function filterProducts() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeCategory = document.querySelector('.filter-btn.active').getAttribute('data-category');
+                let visibleProductCount = 0;
+
+                productCards.forEach(card => {
+                    const productName = card.querySelector('h3').textContent.toLowerCase();
+                    const productDescription = card.querySelector('p').textContent.toLowerCase();
+                    const cardCategory = card.getAttribute('data-category');
+
+                    const searchMatch = productName.includes(searchTerm) || productDescription.includes(searchTerm);
+                    const categoryMatch = (activeCategory === 'all') || (cardCategory === activeCategory);
+
+                    if (searchMatch && categoryMatch) {
+                        card.style.display = 'block';
+                        visibleProductCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (visibleProductCount === 0) {
+                    noResultsMessage.style.display = 'block';
+                } else {
+                    noResultsMessage.style.display = 'none';
+                }
+            }
+
+            searchInput.addEventListener('input', filterProducts);
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    filterProducts();
+                });
+            });
+
+            filterProducts();
+        });
+    </script>
+</body>
+</html>
